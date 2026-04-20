@@ -616,3 +616,8 @@ footer .nav-links {
     margin-bottom: 1.5rem;
 }
 
+article p {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.85rem;
+}
