@@ -41,6 +41,9 @@
     .about-containers{
         margin-top:0;
     }
+    body {
+    overflow-x: hidden;
+}
 }
 
 @media screen and (max-width: 600px){
@@ -51,6 +54,9 @@
     #profile{
         height:83vh;
         margin-bottom:0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     article{
         font-size:1rem;
