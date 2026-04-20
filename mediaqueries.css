@@ -65,6 +65,13 @@
         height:fit-content;
         margin-bottom:2rem;
     }
+    .about-container {
+    flex-direction: column;
+}
+
+.experience-details-container .about-container {
+    flex-direction: column;
+}
     .about-containers,
     .contact-info-upper-container,
     .btn-container{
