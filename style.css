@@ -636,3 +636,7 @@ article p {
     margin: 0.25rem 1rem 0.5rem 1rem;
     font-family: 'Space Mono', monospace;
 }
+
+#profile .section_pic-container img {
+  object-position: center 85%;
+}
