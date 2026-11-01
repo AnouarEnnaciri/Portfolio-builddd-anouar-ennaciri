@@ -3,476 +3,656 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anouar Ennaciri | Portfolio</title>
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
+
+    <meta
+      name="description"
+      content="Anouar Ennaciri — backend engineering student building Java/Spring Boot systems, with Docker and CI/CD on the delivery side."
+    />
+
+    <title>Anouar Ennaciri | Backend Engineering Portfolio</title>
+
+    <!-- Link previews (LinkedIn, WhatsApp, Slack, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anouar Ennaciri | Backend Engineering Portfolio" />
+    <meta
+      property="og:description"
+      content="Java/Spring Boot backend projects, a banking internship, and live demos."
+    />
+    <meta
+      property="og:url"
+      content="https://anouar-ennaciri-portfolio.netlify.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://anouar-ennaciri-portfolio.netlify.app/assets/profilepic.jpg"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+
+    <!-- If JS fails, don't leave the page invisible -->
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      </style>
+    </noscript>
   </head>
+
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Anouar Ennaciri</div>
-      <div>
+    <header class="site-header">
+      <nav id="desktop-nav" class="nav-shell">
+        <a class="logo" href="#profile">
+          <span class="logo-mark">AE</span>
+          <span>Anouar Ennaciri</span>
+        </a>
+
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Profile</a></li>
+          <li><a href="#professional-experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Anouar Ennaciri</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Profile</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section_pic-container">
-        <img
-          src="./assets/profilepic.jpg"
-          alt="Anouar Ennaciri Photo de Profile"
-        />
-      </div>
-      <div class="section_text">
-        <p class="section_text_p1">Hello, I'm</p>
-        <h1 class="title">Anouar Ennaciri</h1>
-        <p class="section_text_p2">Computer Science Student</p>
-        <div class="btn-container">
-          <a
-             href="#"
-            onclick="downloadCV(); return false;"
-             class="btn btn-color-2"
-             >
-             Download CV
-            </a>
+      </nav>
+
+      <nav id="hamburger-nav" class="nav-shell">
+        <a class="logo" href="#profile">
+          <span class="logo-mark">AE</span>
+          <span>Anouar Ennaciri</span>
+        </a>
+
+        <div class="hamburger-menu">
           <button
-            class="btn btn-color-1"
-            onclick="location.href = './#contact'"
+            class="hamburger-icon"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            onclick="toggleMenu()"
           >
-            Contact Info
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
+
+          <ul class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li>
+              <a href="#professional-experience" onclick="toggleMenu()">
+                Experience
+              </a>
+            </li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn Profile"
-            class="icon"
-            onClick="location.href='https://www.linkedin.com/in/anouar-ennaciri-223b76374/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My GitHub Profile"
-            class="icon"
-            onClick="location.href='https://github.com/AnouarEnnaciri'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section_text_p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section_pic-container">
-          <img
-            src="./assets/about-pic.jpeg"
-            alt="Anouar Ennaciri Photo de Profile"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-container">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience Icon"
-                class="icon"
-              />
-              <h3>Profile</h3>
-              <p>Computer Science Student</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="education Icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>
-                BAC Science Physique et Chimie <br />
-                Computer Science degree from EMSI
-              </p>
-            </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="profile" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">BACKEND · DEVOPS · SOFTWARE ENGINEERING</p>
+
+          <h1>
+            Anouar Ennaciri
+            <span class="accent-text">Backend systems in Java &amp; Spring Boot</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Engineering student at EMSI building Java/Spring Boot backends with
+            PostgreSQL and Oracle, shipped with Docker and CI/CD. Currently
+            growing toward DevOps and platform engineering.
+          </p>
+
+          <div class="hero-actions">
+            <button
+              class="btn btn-primary"
+              type="button"
+              onclick="downloadCV()"
+            >
+              Download CV
+            </button>
+
+            <a class="btn btn-secondary" href="#projects">
+              View Projects
+            </a>
           </div>
-          <div class="text-container">
+
+          <div class="hero-socials">
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/anouar-ennaciri-223b76374/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./assets/linkedin.png"
+                alt="LinkedIn"
+                class="social-icon"
+              />
+              <span>LinkedIn</span>
+            </a>
+
+            <a
+              class="social-link"
+              href="https://github.com/AnouarEnnaciri"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./assets/github.png"
+                alt="GitHub"
+                class="social-icon"
+              />
+              <span>GitHub</span>
+            </a>
+
+            <a
+              class="social-link"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=anouar.pitech@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="./assets/email.png"
+                alt="Email"
+                class="social-icon"
+              />
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="photo-frame">
+            <img
+              src="./assets/profilepic.jpg"
+              alt="Portrait of Anouar Ennaciri"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-shell content-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ABOUT</p>
+
+          <h2>Engineering first. Tools second.</h2>
+
+          <p>
+            I am an EMSI Computer Science &amp; Networks engineering student
+            building production-style applications across backend, full stack,
+            and deployment.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-copy surface reveal">
             <p>
-              Computer Science student at EMSI, building real-world applications
-              across the full stack. Passionate about clean code, scalable
-              systems, and the intersection of development and DevOps
+              My strongest direction is backend software engineering: designing APIs,
+              modelling data, handling authentication and authorization, testing
+              business logic, and deploying applications with real operational
+              constraints.
             </p>
+
+            <p>
+              On the delivery side I work with Docker, Jenkins and CI/CD, and I
+              add applied AI and data work when it improves the system rather
+              than distracts from the core engineering problem.
+            </p>
+          </article>
+
+          <div class="about-facts reveal">
+            <article class="fact-card surface">
+              <span class="fact-label">Education</span>
+              <strong>EMSI</strong>
+              <p>
+                Engineering Degree in Computer Science &amp; Networks · Expected 2028
+              </p>
+            </article>
+
+            <article class="fact-card surface">
+              <span class="fact-label">Primary Stack</span>
+              <strong>Java · Spring Boot</strong>
+              <p>PostgreSQL · REST APIs · Docker · CI/CD</p>
+            </article>
           </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Scroll Down Arrow"
-        class="icon arrow"
-        onclick="location.href = './#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section_text_p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-container">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets//checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Typescript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MongoDB</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets//checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets//checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
+      </section>
+
+      <section
+        id="professional-experience"
+        class="section-shell content-section"
+      >
+        <div class="section-heading reveal">
+          <p class="eyebrow">INTERNSHIP</p>
+          <h2>Professional Experience</h2>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Scroll Down Arrow"
-        class="icon arrow"
-        onclick="location.href = './#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section_text_p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-container">
-          <div class="details-container color-container">
-            <div class="article-container">
+
+        <article class="experience-card surface reveal">
+          <div class="experience-topline">
+            <div class="experience-identity">
+              <div class="company-logo-slot">
+                <img
+                  src="./assets/al-barid-bank-logo.jpg"
+                  alt="Al Barid Bank logo"
+                  class="company-logo"
+                />
+              </div>
+
+              <div>
+                <p class="experience-company">Al Barid Bank</p>
+                <h3>Software Engineering Intern</h3>
+              </div>
+            </div>
+
+            <span class="experience-date">Summer 2026</span>
+          </div>
+
+          <p class="experience-summary">
+            Designed and built Fatourati, a back-office module for importing and
+            reconciling financial files, added to the bank's existing
+            microservices platform. I developed both the Spring Boot backend and
+            the Angular frontend.
+          </p>
+
+          <ul class="experience-points">
+            <li>
+              Built Fatourati end to end: Spring Boot microservices on Oracle and
+              an Angular frontend with three pages (files, reconciliation,
+              reconciliation notices), including Excel export.
+            </li>
+
+            <li>
+              Implemented the import flow: upload a folder or TXT/JSON file,
+              preview it, then process it into the reconciliation pages.
+            </li>
+
+            <li>
+              Containerized five services with Docker and set up a Jenkins
+              pipeline for builds.
+            </li>
+
+            <li>
+              Integrated with the platform's existing architecture: API Gateway,
+              Eureka service discovery, Config Server and JWT/OAuth2
+              authentication.
+            </li>
+
+            <li>
+              Also developed employee CRUD APIs with Spring Boot and Oracle behind
+              the existing gateway.
+            </li>
+          </ul>
+
+          <div class="tag-row">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Oracle</span>
+            <span>Angular</span>
+            <span>Docker</span>
+            <span>Jenkins</span>
+            <span>API Gateway</span>
+            <span>Eureka</span>
+            <span>JWT / OAuth2</span>
+          </div>
+        </article>
+      </section>
+
+      <section id="skills" class="section-shell content-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">TECHNICAL SKILLS</p>
+
+          <h2>Focused stack, broad enough to ship.</h2>
+
+          <p>
+            Technologies I have used in projects, coursework, or professional work.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group surface reveal">
+            <p class="skill-kicker">01</p>
+            <h3>Backend</h3>
+
+            <div class="skill-list">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Python</span>
+              <span>Django</span>
+              <span>Node.js / Express</span>
+            </div>
+          </article>
+
+          <article class="skill-group surface reveal">
+            <p class="skill-kicker">02</p>
+            <h3>Databases</h3>
+
+            <div class="skill-list">
+              <span>PostgreSQL</span>
+              <span>Oracle</span>
+              <span>MongoDB</span>
+              <span>SQL</span>
+              <span>JPA / Hibernate</span>
+            </div>
+          </article>
+
+          <article class="skill-group surface reveal">
+            <p class="skill-kicker">03</p>
+            <h3>Frontend</h3>
+
+            <div class="skill-list">
+              <span>Angular</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>HTML / CSS</span>
+              <span>Tailwind CSS</span>
+            </div>
+          </article>
+
+          <article class="skill-group surface reveal">
+            <p class="skill-kicker">04</p>
+            <h3>Engineering &amp; DevOps</h3>
+
+            <div class="skill-list">
+              <span>Docker</span>
+              <span>Jenkins</span>
+              <span>GitHub Actions</span>
+              <span>Git / GitHub</span>
+              <span>REST APIs</span>
+              <span>JWT / OAuth2</span>
+              <span>Testing</span>
+              <span>CI/CD</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section-shell content-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">PORTFOLIO</p>
+
+          <h2>Selected Projects</h2>
+
+          <p>
+            Backend, full-stack, and applied AI projects with live deployments and source code.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured surface reveal">
+            <div class="project-media">
               <img
                 src="./assets/sentinel-hse.png"
-                alt="Sentinel HSE"
-                class="project-img"
+                alt="Sentinel HSE interface"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Sentinel HSE - Intelligent HSE Incident Management Platform</h2>
-            <p>
-              Full-stack HSE incident management platform with 5 user roles (Admin, HSE Manager, Technician, Employee, Direction), JWT authentication, 6-stage workflow, real-time notifications, file uploads, corrective actions tracking, dashboard analytics, CSV/PDF export, and dark mode.
-            </p>
-            <p>
-              Spring Boot 3.5.14 | React 18 | PostgreSQL 16 | JWT | Tailwind CSS | Fly.io | Vercel | Neon
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://github.com/AnouarEnnaciri/HSE-plaftorm-Projet'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://hse-plaftorm-projet-hadk.vercel.app'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
 
-          <div class="details-container color-container">
-            <div class="article-container">
+            <div class="project-body">
+              <div class="project-meta">
+                <span>FEATURED</span>
+                <span>FULL STACK · BACKEND</span>
+              </div>
+
+              <h3>Sentinel HSE</h3>
+
+              <p>
+                Incident-management platform with five roles, JWT authentication,
+                a six-stage workflow, corrective actions, notifications, analytics,
+                file uploads, and exports. Deployed on Fly.io, Vercel and Neon.
+              </p>
+
+              <div class="tag-row">
+                <span>Spring Boot</span>
+                <span>React</span>
+                <span>PostgreSQL</span>
+                <span>JWT</span>
+                <span>Tailwind</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="project-btn project-btn-primary"
+                  href="https://hse-plaftorm-projet-hadk.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo <span aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  class="project-btn project-btn-secondary"
+                  href="https://github.com/AnouarEnnaciri/HSE-plaftorm-Projet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card surface reveal">
+            <div class="project-media compact">
               <img
                 src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
+                alt="Lift and Drip e-commerce interface"
               />
             </div>
-            <h2 class="experience-sub-title project-title">
-              MERN Stack E-Commerce Platform
-            </h2>
-            <p>
-              Full-stack MERN e-commerce platform with JWT authentication,
-              product search, cart management, order confirmation, order
-              history, and admin dashboard for product management.
-            </p>
-            <p>
-              MERN | MongoDB Atlas | JWT | Redux | Stripe + PayPal | Admin Panel
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://github.com/AnouarEnnaciri/lift-and-drip-ecommerce' "
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://lift-and-drip-ecommerce-l52u.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-4.png"
-                alt="Cabinet Dentaire"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Cabinet Dentaire - Java/JSP Dental Clinic
-            </h2>
-            <p>
-              Role-based dental clinic management system built with Java Servlets/JSP. Features include 3 user roles (Admin,
-              Doctor, Secretary),appointment scheduling, medical
-              records with acts and prescriptions, invoice generation, PDF
-              medical certificates, and statistics dashboard.
-            </p>
-            <p>
-              Java 17 | JSP/Servlets | SQLite | JDBC | Tomcat 7 | iTextPDF | Chart.js | MVC Architecture
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://github.com/AnouarEnnaciri/cabinet-dentaire-java'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://cabinet-dentaire-java.onrender.com'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>FULL STACK</span>
+              </div>
 
-          <div class="details-container color-container">
-            <div class="article-container">
+              <h3>Lift &amp; Drip E-Commerce</h3>
+
+              <p>
+                MERN e-commerce platform with JWT authentication, product search,
+                cart, checkout, order history, and an admin dashboard. Deployed on
+                Vercel with MongoDB Atlas.
+              </p>
+
+              <div class="tag-row">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Redux</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="project-btn project-btn-primary"
+                  href="https://lift-and-drip-ecommerce-l52u.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo <span aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  class="project-btn project-btn-secondary"
+                  href="https://github.com/AnouarEnnaciri/lift-and-drip-ecommerce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card surface reveal">
+            <div class="project-media compact jobtech-media">
               <img
                 src="./assets/jobtech.PNG"
-                alt="JobTech Solutions"
-                class="project-img"
+                alt="JobTech Solutions interface"
+                class="jobtech-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">
-              JobTech Solutions - Job Portal with AI
-            </h2>
-            <p>
-              Django job portal with AI-powered CV parsing, match scoring,
-              interview scheduling, PDF/Excel exports, and real-time
-              notifications.
-            </p>
-            <p>
-              Django | Python | PostgreSQL/SQLite | spaCy NLP | ReportLab | openpyxl
-            </p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://github.com/AnouarEnnaciri/JobTechSolutions'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onClick="location.href='https://AnouarEnnaciri.pythonanywhere.com'"
-              >
-                Live Demo
-              </button>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>PYTHON · APPLIED AI</span>
+              </div>
+
+              <h3>JobTech Solutions</h3>
+
+              <p>
+                Django job portal with CV parsing, AI-assisted match scoring,
+                interview scheduling, exports, and notifications. Deployed on
+                PythonAnywhere.
+              </p>
+
+              <div class="tag-row">
+                <span>Django</span>
+                <span>Python</span>
+                <span>PostgreSQL</span>
+                <span>spaCy</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="project-btn project-btn-primary"
+                  href="https://AnouarEnnaciri.pythonanywhere.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo <span aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  class="project-btn project-btn-secondary"
+                  href="https://github.com/AnouarEnnaciri/JobTechSolutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
+          </article>
+
+          <article class="project-card surface reveal">
+            <div class="project-media compact">
+              <img
+                src="./assets/project-4.png"
+                alt="Cabinet Dentaire interface"
+              />
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span>JAVA</span>
+              </div>
+
+              <h3>Cabinet Dentaire</h3>
+
+              <p>
+                Role-based dental clinic system with appointment scheduling,
+                medical records, invoices, PDF certificates, and statistics.
+                Deployed on Render.
+              </p>
+
+              <div class="tag-row">
+                <span>Java 17</span>
+                <span>JSP / Servlets</span>
+                <span>SQLite</span>
+                <span>JDBC</span>
+                <span>MVC</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="project-btn project-btn-primary"
+                  href="https://cabinet-dentaire-java.onrender.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo <span aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  class="project-btn project-btn-secondary"
+                  href="https://github.com/AnouarEnnaciri/cabinet-dentaire-java"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="future-project surface reveal">
+          <div>
+            <p class="eyebrow">NEXT PROJECT</p>
+            <h3>PayRail</h3>
+
+            <p>
+              Backend reliability project focused on transactions, idempotency,
+              concurrency, recovery, reconciliation, testing, observability,
+              and deployment.
+            </p>
+          </div>
+
+          <span class="future-badge">IN DEVELOPMENT</span>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section">
+        <div class="contact-panel surface reveal">
+          <div>
+            <p class="eyebrow">CONTACT</p>
+
+            <h2>Get In Touch</h2>
+
+            <p>
+              Open to backend software engineering opportunities, with interests in cloud/DevOps and data engineering.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              class="btn btn-primary"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=anouar.pitech@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Email Me
+            </a>
+
+            <a
+              class="btn btn-secondary"
+              href="https://www.linkedin.com/in/anouar-ennaciri-223b76374/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contact">
-      <p class="section_text_p1">Get In Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=anouar.pitech@gmail.com"
-            target="_blank"
-          >
-            <img
-              src="./assets/email.png"
-              alt="Send email via Gmail"
-              class="icon contact-icon email-icon"
-            />
-          </a>
-          <p>
-            <a href="mailto:anouar.pitech@gmail.com">anouar.pitech@gmail.com</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <a
-            href="https://www.linkedin.com/in/anouar-ennaciri-223b76374/"
-            target="_blank"
-          >
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn Icon"
-              class="icon"
-            />
-          </a>
-          <p>
-            <a href="https://www.linkedin.com/in/anouar-ennaciri-223b76374/" target="_blank">LinkedIn</a>
-          </p>
-        </div>
-      </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Profile</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2026 Anouar Ennaciri. All rights reserved.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Anouar Ennaciri.</p>
+      <a href="#profile">Back to top ↑</a>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
