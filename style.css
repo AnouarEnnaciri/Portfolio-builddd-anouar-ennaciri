@@ -1058,3 +1058,10 @@ button {
     transition: none;
   }
 }
+
+.availability {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
