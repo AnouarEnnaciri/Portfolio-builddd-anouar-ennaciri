@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400..600&display=swap" rel="stylesheet">
 
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -41,7 +41,6 @@
           <li><a href="#professional-experience">Experience</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#security">Security</a></li>
-          <li><a href="#payrail">PayRail</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -58,7 +57,6 @@
         <li><a href="#professional-experience">Experience</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#security">Security projects</a></li>
-        <li><a href="#payrail">PayRail</a></li>
         <li><a href="#projects">Software projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -74,7 +72,6 @@
       <li><a href="#professional-experience"><span>Experience</span></a></li>
       <li><a href="#about"><span>About</span></a></li>
       <li><a href="#security"><span>Security projects</span></a></li>
-      <li><a href="#payrail"><span>PayRail</span></a></li>
       <li><a href="#projects"><span>Software projects</span></a></li>
       <li><a href="#skills"><span>Skills</span></a></li>
       <li><a href="#contact"><span>Contact</span></a></li>
@@ -309,41 +306,12 @@
       </div>
     </section>
 
-    <!-- PAYRAIL -->
-    <section class="section band" id="payrail" aria-labelledby="pay-title">
-      <div class="wrap pay-grid">
-        <div class="pay-main">
-          <p class="kicker">Flagship backend project</p>
-          <div class="title-row"><h2 id="pay-title">PayRail</h2><span class="status dev">In development</span></div>
-          <p class="pay-lead">
-            Backend reliability project focused on transactions, idempotency, concurrency, recovery,
-            reconciliation, testing, observability, and deployment.
-          </p>
-          <p class="stack-line">Java 17, Spring Boot, PostgreSQL, Flyway, Testcontainers, Docker Compose, GitHub Actions</p>
-          <p class="fine">Public deployment is the remaining step.</p>
-          <div class="links">
-            <a class="link-arrow" href="https://github.com/AnouarEnnaciri/PayRail" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> (opens in a new tab)</span>
-              <svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <dl class="cases">
-          <div class="case"><dt>Idempotency</dt><dd>Retrying a payment request must never move money twice.</dd></div>
-          <div class="case"><dt>Concurrency</dt><dd>Simultaneous requests against one account still have to leave the balance correct.</dd></div>
-          <div class="case"><dt>Recovery</dt><dd>A failure halfway through a transaction must not leave the books half written.</dd></div>
-          <div class="case"><dt>Reconciliation</dt><dd>Records from the payment flow are checked against a separate settlement source.</dd></div>
-          <div class="case"><dt>Testing</dt><dd>Integration tests run against a real PostgreSQL instance, and CI runs them on every push.</dd></div>
-        </dl>
-      </div>
-    </section>
-
     <!-- SOFTWARE PROJECTS -->
     <section class="section" id="projects" aria-labelledby="proj-title">
       <div class="wrap">
         <header class="block-head">
           <h2 id="proj-title">Software engineering projects</h2>
-          <p class="section-intro">Four deployed applications. Each has a live demo and public source.</p>
+          <p class="section-intro">Four deployed applications and a locally runnable payment platform.</p>
         </header>
 
         <ul class="work">
@@ -364,6 +332,25 @@
                   <svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 <a class="link-arrow link-quiet" href="https://github.com/AnouarEnnaciri/HSE-plaftorm-Projet" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+              </div>
+            </div>
+          </li>
+
+          <li class="work-item">
+            <a class="work-shot" href="./assets/PayRail.PNG" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/PayRail.PNG" alt="PayRail payment platform dashboard screenshot" loading="lazy" decoding="async">
+              <span class="sr-only">Open the PayRail application screenshot (opens in a new tab)</span>
+            </a>
+            <div class="work-body">
+              <p class="work-kind">Backend engineering · Payment systems</p>
+              <h3>PayRail</h3>
+              <p>Payment platform built around a double-entry ledger, atomic transfers, idempotency, concurrency control, outbox processing, and settlement reconciliation. Includes integration tests and automated CI.</p>
+              <p class="deploy"><span class="k">Status</span> Core backend complete · Local demo</p>
+              <p class="stack-line">Java 17, Spring Boot, PostgreSQL, Flyway, Docker, Testcontainers, GitHub Actions</p>
+              <div class="links">
+                <a class="link-arrow" href="https://github.com/AnouarEnnaciri/PayRail" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in a new tab)</span>
+                  <svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true" focusable="false"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
               </div>
             </div>
           </li>
